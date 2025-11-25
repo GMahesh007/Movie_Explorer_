@@ -1,0 +1,73 @@
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 50px;
+  animation: fadeInScale 0.6s ease;
+}
+
+/* Stagger animation for movie cards */
+.movie-grid > * {
+  animation: fadeInScale 0.6s ease both;
+}
+
+.movie-grid > *:nth-child(1) { animation-delay: 0.05s; }
+.movie-grid > *:nth-child(2) { animation-delay: 0.1s; }
+.movie-grid > *:nth-child(3) { animation-delay: 0.15s; }
+.movie-grid > *:nth-child(4) { animation-delay: 0.2s; }
+.movie-grid > *:nth-child(5) { animation-delay: 0.25s; }
+.movie-grid > *:nth-child(6) { animation-delay: 0.3s; }
+.movie-grid > *:nth-child(7) { animation-delay: 0.35s; }
+.movie-grid > *:nth-child(8) { animation-delay: 0.4s; }
+
+/* Skeleton Loading */
+.skeleton {
+  pointer-events: none;
+  overflow: hidden;
+  background: var(--glass-white);\n  backdrop-filter: blur(20px);\n  border-radius: var(--border-radius-lg);\n  border: 1px solid var(--glass-border);\n}
+
+.skeleton-poster {
+  width: 100%;
+  padding-top: 150%;
+  background: linear-gradient(\n    90deg,\n    var(--dark-2) 0%,\n    var(--dark-3) 50%,\n    var(--dark-2) 100%\n  );\n  background-size: 200% 100%;\n  animation: shimmer 2s ease-in-out infinite;\n  position: relative;\n  overflow: hidden;\n}\n\n.skeleton-poster::after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: -100%;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(\n    90deg,\n    transparent,\n    rgba(255, 10, 84, 0.2),\n    transparent\n  );\n  animation: shimmerLight 2s ease-in-out infinite;\n}\n\n@keyframes shimmerLight {\n  0% { left: -100%; }\n  100% { left: 100%; }\n}
+
+.skeleton-info {
+  padding: 20px;
+}
+
+.skeleton-title {
+  height: 28px;
+  background: linear-gradient(\n    90deg,\n    var(--dark-2) 0%,\n    var(--dark-3) 50%,\n    var(--dark-2) 100%\n  );\n  background-size: 200% 100%;\n  animation: shimmer 2s ease-in-out infinite;\n  border-radius: var(--border-radius-sm);\n  margin-bottom: 12px;\n}
+
+.skeleton-meta {
+  height: 24px;
+  width: 70%;\n  background: linear-gradient(\n    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
