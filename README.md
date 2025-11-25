@@ -1,6 +1,6 @@
 # 🎬 OMDB Movie Explorer
 
-A premium, full-stack movie exploration application with **next-level UI/UX** featuring glassmorphism design, 3D animations, and cosmic gradients. Built with React and Node.js, powered by the OMDB API.
+A full-stack movie exploration application built with React and Node.js, powered by the OMDB API. Features a premium UI/UX with glassmorphism design, 3D animations, and cosmic gradients.
 
 ![OMDB Explorer](https://img.shields.io/badge/version-2.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -9,7 +9,7 @@ A premium, full-stack movie exploration application with **next-level UI/UX** fe
 
 ## 🎥 Demo
 
-**[Watch Demo Video](https://drive.google.com/file/d/1yZ0jWMraivFxfcNqosu0FW38KoLNU7lJ/view?usp=sharing)**
+**[Watch Video](https://drive.google.com/file/d/1yZ0jWMraivFxfcNqosu0FW38KoLNU7lJ/view?usp=sharing)**
 
 ### Screenshots
 
@@ -25,7 +25,7 @@ A premium, full-stack movie exploration application with **next-level UI/UX** fe
 ## ✨ Features
 
 ### Frontend
-- 🎨 **Premium UI/UX** - Glassmorphism design with 60 FPS animations
+- 🎨 **Rich UI/UX** - Glassmorphism design with 60 FPS animations
 - 🔍 **Advanced Search** - Search movies by title with filters (year, type)
 - 📱 **Responsive Design** - Works seamlessly on all devices
 - ❤️ **Favorites System** - Save and manage favorite movies
@@ -88,7 +88,7 @@ omdb-movie-explorer/
 1. **Clone the repository**
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/GMahesh007/Movie_Explorer_.git
 cd omdb-movie-explorer
 ```
 
